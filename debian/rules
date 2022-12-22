@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+UNICODE = /usr/share/unicode
+VERSION = 14.0.0
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir data
+	ln -s $(UNICODE)/BidiBrackets.txt data/$(VERSION)-bidi-brackets.txt
+	ln -s $(UNICODE)/BidiMirroring.txt data/$(VERSION)-bidi-mirroring.txt
+	ln -s $(UNICODE)/Blocks.txt data/$(VERSION)-blocks.txt
+	ln -s $(UNICODE)/CaseFolding.txt data/$(VERSION)-case-folding.txt
+	ln -s $(UNICODE)/CompositionExclusions.txt data/$(VERSION)-composition-exclusions.txt
+	ln -s $(UNICODE)/UnicodeData.txt data/$(VERSION)-database.txt
+	ln -s $(UNICODE)/DerivedCoreProperties.txt data/$(VERSION)-derived-core-properties.txt
+	ln -s $(UNICODE)/DerivedNormalizationProps.txt data/$(VERSION)-derived-normalization-properties.txt
+	ln -s $(UNICODE)/emoji/emoji-sequences.txt data/$(VERSION)-emoji-sequences.txt
+	ln -s $(UNICODE)/emoji/emoji-test.txt data/$(VERSION)-emoji-test.txt
+	ln -s $(UNICODE)/emoji/emoji-data.txt data/$(VERSION)-emoji.txt
+	ln -s $(UNICODE)/emoji/emoji-zwj-sequences.txt data/$(VERSION)-emoji-zwj-sequences.txt
+	ln -s $(UNICODE)/LineBreak.txt data/$(VERSION)-line-break.txt
+	ln -s $(UNICODE)/PropList.txt data/$(VERSION)-properties.txt
+	ln -s $(UNICODE)/ScriptExtensions.txt data/$(VERSION)-script-extensions.txt
+	ln -s $(UNICODE)/Scripts.txt data/$(VERSION)-scripts.txt
+	ln -s $(UNICODE)/auxiliary/WordBreakProperty.txt data/$(VERSION)-word-break.txt
+	node scripts/generate-data.js
+
+override_dh_auto_clean:
+	rm -rf data
+	rm -rf output

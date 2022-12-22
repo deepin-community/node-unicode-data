@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+package=`egrep '^Package' debian/control|sed -e 's/.*: node-//'`
+node -e "require('@unicode/$package');"

@@ -1,0 +1,11 @@
+How to get the sources?
+=======================
+
+Upstream doesn't want to tag release : he runs the scripts, obtains unicode-*
+packages, commits them and gives them versions.
+
+So to get something useful, we take a git commit and use it to generate the
+package ; with the following modifications:
+- remove .git/
+- remove data/ (which means we have our own resources.js)
+- remove tests/ (they basically ship prebuilt data to make a comparison)

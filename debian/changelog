@@ -1,0 +1,174 @@
+node-unicode-data (0~20211027+git243f19e8-4) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Source-only upload
+
+ -- Yadd <yadd@debian.org>  Tue, 09 Nov 2021 18:15:51 +0100
+
+node-unicode-data (0~20211027+git243f19e8-3) unstable; urgency=medium
+
+  * Enable the emoji-test chunk.
+  * Fix autopkgtest.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 29 Oct 2021 13:08:52 +0200
+
+node-unicode-data (0~20211027+git243f19e8-2) unstable; urgency=medium
+
+  * Install in another directory.
+  * Drop the replace on Unicode 13.0.0, by making it coinstallable.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 27 Oct 2021 20:09:35 +0200
+
+node-unicode-data (0~20211027+git243f19e8-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-jsesc, node-mkdirp and
+      node-regenerate.
+
+  [ Julien Puydt ]
+  * New upstream "release".
+  * Refresh patches.
+  * Ship Unicode 14.0.0.
+  * Tighten deps so it builds.
+  * Declare Unicode 14.0.0 replaces 13.0.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 27 Oct 2021 19:32:12 +0200
+
+node-unicode-data (0~20200315+gitfc57d75a-5) unstable; urgency=medium
+
+  * Change b-dep from node-request to node-got. (Closes: #958695)
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 08 May 2020 14:53:12 +0200
+
+node-unicode-data (0~20200315+gitfc57d75a-4) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 14 Apr 2020 08:59:03 +0200
+
+node-unicode-data (0~20200315+gitfc57d75a-3) unstable; urgency=medium
+
+  * Team upload
+  * Require unicode-data ≥ 13.0.0-2 (Closes: #954060)
+  * Fix autopkgtest dependency (Closes: #956512)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 12 Apr 2020 17:24:38 +0200
+
+node-unicode-data (0~20200315+gitfc57d75a-2) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload
+  * Add "Rules-Requires-Root: no"
+  * Fix unicode-latest link
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 30 Mar 2020 10:51:39 +0200
+
+node-unicode-data (0~20200315+gitfc57d75a-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Julien Puydt ]
+  * Bump std-vers to 4.5.0.
+  * Mark the package M-A: foreign following hinter.
+  * New upstream "release".
+  * Ship unicode 13.0.0.
+  * Update depends versions.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 15 Mar 2020 10:52:12 +0100
+
+node-unicode-data (0~20190709+git706d06c0-4) unstable; urgency=medium
+
+  * Team upload
+  * Provides package node-unicode-lastest
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 06 Sep 2019 12:23:50 +0200
+
+node-unicode-data (0~20190709+git706d06c0-3) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Add debian/gbp.conf
+  * Move installed files to /usr/share/nodejs
+  * Add upstream/metadata
+  * Fix autopkgtest
+  * Drop unneeded version constraints from (build) dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 24 Jul 2019 14:57:18 +0200
+
+node-unicode-data (0~20190709+git706d06c0-2) unstable; urgency=medium
+
+  * Really upload the merged XG-JP package.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 09 Jul 2019 10:49:24 +0200
+
+node-unicode-data (0~20190709+git706d06c0-1) unstable; urgency=medium
+
+  [Xavier Guimard]
+  * Update node-unicode-property-value-aliases build dependency version to 3.4
+    (Closes: #929654)
+
+  [Julien Puydt]
+  * New upstream "release" for unicode 12.1.0.
+  * Bump std-ver to 4.4.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 09 Jul 2019 09:54:14 +0200
+
+node-unicode-data (0~20190414+gitbf518e99-2) unstable; urgency=medium
+
+  * Make the package really work with unicode 12.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 15 Apr 2019 19:12:53 +0200
+
+node-unicode-data (0~20190414+gitbf518e99-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.3.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sun, 14 Apr 2019 00:51:30 +0200
+
+node-unicode-data (0~20181101+gitaddfb440-1) unstable; urgency=medium
+
+  * Mention unicode 11 in package description (Closes: #908212).
+  * Change autopkgtest require to unicode 11 too (Closes: #909222).
+  * Bump std-ver to 4.2.1.
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 01 Nov 2018 12:36:46 +0100
+
+node-unicode-data (0~20180730+gitca26ee35-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Now support unicode 11.
+  * Bump std-ver to 4.1.5.
+  * Update deps versions.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 30 Jul 2018 13:48:45 +0200
+
+node-unicode-data (0~20180223+gitd542555-2) unstable; urgency=medium
+
+  * Refresh packaging:
+    - Bump dh compat to 11.
+    - Bump std-ver to 4.1.4.
+    - Use my debian.org mail address.
+    - Point Vcs-* fields to salsa.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 15 May 2018 16:33:34 +0200
+
+node-unicode-data (0~20180223+gitd542555-1) unstable; urgency=medium
+
+  * Updated version.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 23 Feb 2018 19:21:48 +0100
+
+node-unicode-data (0~20170909+gitcb53c2ac-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #872697)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 09 Sep 2017 08:38:49 +0200

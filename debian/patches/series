@@ -1,0 +1,3 @@
+debian_resources.patch
+use_fs_extra_for_cp
+don_t_ship_unneeded.patch

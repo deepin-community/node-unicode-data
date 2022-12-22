@@ -1,0 +1,36 @@
+Source: node-unicode-data
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Julien Puydt <jpuydt@debian.org>
+Section: javascript
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               node-fs-extra,
+               node-got,
+               node-jsesc,
+               node-lodash-packages,
+               node-mkdirp,
+               node-regenerate,
+               node-unicode-loose-match,
+               node-unicode-property-aliases (>= 1.5~),
+               node-unicode-property-value-aliases (>= 3.6.0+ds-2),
+               node-when,
+               nodejs,
+               unicode-data (>= 14.0.0~)
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-unicode-data
+Vcs-Git: https://salsa.debian.org/js-team/node-unicode-data.git
+Homepage: https://github.com/mathiasbynens/node-unicode-data
+Rules-Requires-Root: no
+
+Package: node-unicode-14.0.0
+Provides: node-unicode-lastest (=${source:Version})
+Architecture: all
+Multi-Arch: foreign
+Depends: nodejs,
+         ${misc:Depends}
+Description: Unicode 14.0.0 data for Node.js
+ JavaScript-compatible Unicode data. Arrays of code points, arrays of symbols,
+ and regular expressions for Unicode v14.0.0’s categories, scripts, blocks,
+ bidi, and other properties.
+ .
+ Node.js is an event-based server-side JavaScript engine.

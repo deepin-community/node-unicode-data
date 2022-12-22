@@ -1,0 +1,14 @@
+Description: point to our own resources.js, since we don't ship upstream's
+Author: Julien Puydt
+Forwarded: no
+
+--- a/scripts/generate-data.js
++++ b/scripts/generate-data.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-const resources = require('../data/resources.js');
++const resources = require('../debian/resources.js');
+ const generateData = require('../index.js');
+ const utils = require('../scripts/utils.js');
+ 

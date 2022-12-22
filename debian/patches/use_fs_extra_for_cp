@@ -1,0 +1,24 @@
+Description: use fs-extra's cp instead of using another trivial package we don't have
+Author: Julien Puydt
+Forwarded: yes
+
+--- node-unicode-data.orig/index.js
++++ node-unicode-data/index.js
+@@ -15,7 +15,7 @@
+ parsers.parseEmojiSequences = require('./scripts/parse-emoji-sequences.js');
+ parsers.parseNames = require('./scripts/parse-names.js');
+ const extend = utils.extend;
+-const cp = require('cp');
++const copySync = require('fs-extra').copySync;
+ const jsesc = require('jsesc');
+ const template = require('lodash.template');
+ 
+@@ -175,7 +175,7 @@
+ 		'decode-property-map.js',
+ 		'decode-ranges.js',
+ 	].forEach(function(file) {
+-		cp.sync(
++		copySync(
+ 			path.resolve(staticPath, file),
+ 			path.resolve(__dirname, `output/unicode-${version}/${file}`)
+ 		);
