@@ -1,6 +1,6 @@
 var resources = [
     {
-	'version': '14.0.0',
+	'version': '15.0.0',
 	'main': '/usr/share/unicode/UnicodeData.txt',
 	'scripts': '/usr/share/unicode/Scripts.txt',
 	'script-extensions': '/usr/share/unicode/ScriptExtensions.txt',

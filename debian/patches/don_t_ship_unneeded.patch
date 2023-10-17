@@ -2,9 +2,9 @@ Description: don't ship part of the generated package, since they're unneeded
 Author: Julien Puydt
 Forwarded: no
 
---- node-unicode-data.orig/index.js
-+++ node-unicode-data/index.js
-@@ -146,14 +146,6 @@
+--- a/index.js
++++ b/index.js
+@@ -154,14 +154,6 @@
  		}
  	}
  	fs.writeFileSync(
@@ -19,7 +19,7 @@ Forwarded: no
  		path.resolve(__dirname, `output/unicode-${version}/index.js`),
  		compileIndex({ 'version': version, 'data': jsesc(dirMap) })
  	);
-@@ -161,17 +153,7 @@
+@@ -169,17 +161,7 @@
  		path.resolve(__dirname, `output/unicode-${version}/package.json`),
  		compilePackage({ 'version': version })
  	);
