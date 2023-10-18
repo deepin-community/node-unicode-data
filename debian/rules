@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 UNICODE = /usr/share/unicode
-VERSION = 14.0.0
+VERSION = 15.0.0
 
 %:
 	dh $@

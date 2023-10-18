@@ -1,3 +1,22 @@
+node-unicode-data (0~20220914+gitb601441-2) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload
+
+ -- Yadd <yadd@debian.org>  Fri, 16 Sep 2022 18:40:37 +0200
+
+node-unicode-data (0~20220914+gitb601441-1) unstable; urgency=medium
+
+  * Team upload
+  * Update nodejs dependency to nodejs:any
+  * Update standards version to 4.6.1, no changes needed.
+  * Add debian/watch
+  * New upstream version 0~20220914+gitb601441
+  * Unfuzz patches
+  * Switch from unicode-14 to unicode-15 (Closes: #1019875)
+
+ -- Yadd <yadd@debian.org>  Fri, 16 Sep 2022 17:45:40 +0200
+
 node-unicode-data (0~20211027+git243f19e8-4) unstable; urgency=medium
 
   * Team upload
